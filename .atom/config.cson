@@ -1,0 +1,16 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    themes: [
+      "one-dark-ui"
+      "colorblind-syntax"
+    ]
+  editor:
+    fontFamily: "Hack"
+    fontSize: 16
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "6a1b0e83-91ea-01b7-f0d8-e9c25a4ffc38"
+  welcome:
+    showOnStartup: false
