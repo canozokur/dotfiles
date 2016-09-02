@@ -23,8 +23,8 @@ set notimeout
 set ttimeout
 
 " Map buffer keys
-noremap <Leader>n :bn<CR>
-noremap <Leader>b :bp<CR>
+nnoremap <Leader>n :bn<CR>
+nnoremap <Leader>b :bp<CR>
 
 " Always show buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -32,3 +32,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Airline config
 " use powerline fonts
 let g:airline_powerline_fonts = 1
+
+" Custom mappings
+" surround word with double quotes
+nnoremap <Leader>" ea"<esc>hbi"<esc>lel
