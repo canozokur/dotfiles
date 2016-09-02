@@ -14,5 +14,21 @@ map <C-n> :NERDTreeToggle<CR>
 " Always show airline
 set laststatus=2
 
+" Remap leader key
+let mapleader = ","
+let g:mapleader = ","
+
+" And disable the timeout for <Leader>
+set notimeout
+set ttimeout
+
+" Map buffer keys
+noremap <Leader>n :bn<CR>
+noremap <Leader>b :bp<CR>
+
 " Always show buffers
 let g:airline#extensions#tabline#enabled = 1
+
+" Airline config
+" use powerline fonts
+let g:airline_powerline_fonts = 1
