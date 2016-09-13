@@ -1,3 +1,0 @@
-#!/bin/bash
-
-echo "U:$(yaourt -Qua | wc -l)"
