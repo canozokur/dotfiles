@@ -1,6 +1,7 @@
 "*":
   core:
     autoHideMenuBar: true
+    projectHome: "/home/queljin/data/git"
     themes: [
       "one-dark-ui"
       "colorblind-syntax"
@@ -10,6 +11,7 @@
     fontSize: 16
     showInvisibles: true
     tabLength: 4
+    tabType: "soft"
   "exception-reporting":
     userId: "6a1b0e83-91ea-01b7-f0d8-e9c25a4ffc38"
   welcome:
