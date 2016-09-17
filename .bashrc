@@ -24,3 +24,7 @@ export EDITOR=vi
 
 # bash history
 export HISTCONTROL='ignoredups:erasedups'
+
+# chruby
+source /usr/share/chruby/chruby.sh
+chruby 2.3
