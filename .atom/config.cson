@@ -2,6 +2,7 @@
   core:
     autoHideMenuBar: true
     projectHome: "/home/queljin/data/git"
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "colorblind-syntax"
