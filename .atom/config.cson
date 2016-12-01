@@ -10,6 +10,7 @@
       "colorblind-syntax"
     ]
   editor:
+    autoIndentOnPaste: false
     fontFamily: "Hack"
     fontSize: 16
     showInvisibles: true
