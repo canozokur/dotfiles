@@ -28,3 +28,6 @@ export HISTCONTROL='ignoredups:erasedups'
 # chruby
 source /usr/share/chruby/chruby.sh
 chruby 2.3
+
+# ansible-playbook alias
+alias ansible-playbook='ansible-playbook --diff'

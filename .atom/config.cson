@@ -3,6 +3,9 @@
     rsensePath: "~/.gem/ruby/2.3.1/bin/rsense"
   core:
     autoHideMenuBar: true
+    disabledPackages: [
+      "spell-check"
+    ]
     projectHome: "/home/queljin/data/git"
     telemetryConsent: "limited"
     themes: [
