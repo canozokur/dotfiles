@@ -31,3 +31,6 @@ chruby 2.3
 
 # ansible-playbook alias
 alias ansible-playbook='ansible-playbook --diff'
+
+# venv alias - all py virtual environments should be in ".venv" dir
+alias venv='source .venv/bin/activate'
