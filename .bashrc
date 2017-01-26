@@ -34,3 +34,9 @@ alias ansible-playbook='ansible-playbook --diff'
 
 # venv alias - all py virtual environments should be in ".venv" dir
 alias venv='source .venv/bin/activate'
+
+## FUNCTIONS
+# generate random string func
+gen_rand_str () {
+    cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
+}
