@@ -1,4 +1,7 @@
 {
+    "common": {
+        "log_file": "~/powerline.log"
+    },
 	"ext": {
 		"ipython": {
 			"colorscheme": "default",
