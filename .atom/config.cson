@@ -10,7 +10,7 @@
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "colorblind-syntax"
+      "colorblind-wombat-dark-syntax"
     ]
   editor:
     autoIndentOnPaste: false
