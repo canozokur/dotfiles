@@ -11,6 +11,12 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Open nerdtree with ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
+" Mapping for ctrl+arrow keys
+map <ESC>[1;5A <C-Up>
+map <ESC>[1;5B <C-Down>
+map <ESC>[1;5C <C-Right>
+map <ESC>[1;5D <C-Left>
+
 " Always show airline
 set laststatus=2
 
