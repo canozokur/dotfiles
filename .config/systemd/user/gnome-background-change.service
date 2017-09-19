@@ -5,6 +5,3 @@ Description=Rotate GNOME background
 Type=oneshot
 Environment=DISPLAY=:0
 ExecStart=/usr/bin/bash /home/queljin/bin/rotate_bg.sh
- 
-[Install]
-WantedBy=basic.target

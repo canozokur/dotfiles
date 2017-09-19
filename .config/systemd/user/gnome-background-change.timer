@@ -7,4 +7,4 @@ Persistent=true
 Unit=gnome-background-change.service
 
 [Install]
-WantedBy=gnome-background-change.service
+WantedBy=timers.target
