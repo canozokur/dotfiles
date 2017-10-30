@@ -35,6 +35,9 @@ alias ansible-playbook='ansible-playbook --diff'
 # venv alias - all py virtual environments should be in ".venv" dir
 alias venv='source .venv/bin/activate'
 
+# openssl s_client alias
+alias os='openssl s_client -connect'
+
 ## FUNCTIONS
 # generate random string func
 gen_rand_str () {
