@@ -19,6 +19,9 @@ alias ssh='TERM=xterm ssh'
 alias vagrant='TERM=xterm vagrant'
 alias chefdk='docker run --rm -it -v ~/data/chef-repo:/repo -v ~/.ssh:/root/.ssh chefdk /bin/bash'
 
+# export GOPATH
+export GOPATH=$HOME/data/gocode
+
 # <3 vi
 export EDITOR=vi
 
@@ -40,17 +43,25 @@ alias os='openssl s_client -connect'
 
 # curl timing
 alias cuti="curl -w '
-time_namelookup:  %{time_namelookup}\n
-time_connect:  %{time_connect}\n
-time_appconnect:  %{time_appconnect}\n
-time_pretransfer:  %{time_pretransfer}\n
-time_redirect:  %{time_redirect}\n
-time_starttransfer:  %{time_starttransfer}\n
-----------\n
+time_namelookup:  %{time_namelookup}
+time_connect:  %{time_connect}
+time_appconnect:  %{time_appconnect}
+time_pretransfer:  %{time_pretransfer}
+time_redirect:  %{time_redirect}
+time_starttransfer:  %{time_starttransfer}
+----------
 time_total:  %{time_total}\n' -o /dev/null -s"
+
+# vagrant rdp
+alias vrdp="vagrant rdp -- -r clipboard:PRIMARYCLIPBOARD -g 1600x900"
 
 ## FUNCTIONS
 # generate random string func
 gen_rand_str () {
     cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
+}
+
+# fingerprint ssh key, compatible with EC2
+function sshkey_fp() {
+    openssl pkey -in $@ -pubout -outform DER | openssl md5 -c
 }
