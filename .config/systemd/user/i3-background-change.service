@@ -1,0 +1,6 @@
+[Unit]
+Description=Rotate i3 background
+ 
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash /home/queljin/bin/rotate_bg_feh.sh

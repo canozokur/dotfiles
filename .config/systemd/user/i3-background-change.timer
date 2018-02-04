@@ -1,0 +1,10 @@
+[Unit]
+Description=Rotate i3 wallpaper timer
+
+[Timer]
+OnCalendar=*:0/15
+Persistent=true
+Unit=i3-background-change.service
+
+[Install]
+WantedBy=timers.target
