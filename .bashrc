@@ -22,6 +22,12 @@ alias chefdk='docker run --rm -it -v ~/data/chef-repo:/repo -v ~/.ssh:/root/.ssh
 # export GOPATH
 export GOPATH=$HOME/data/gocode
 
+# add Go binaries to PATH
+export PATH=$PATH:$HOME/data/gocode/bin
+
+# add personal ~/bin directory to PATH
+export PATH=$PATH:$HOME/bin
+
 # <3 vi
 export EDITOR=vi
 
@@ -65,3 +71,6 @@ gen_rand_str () {
 function sshkey_fp() {
     openssl pkey -in $@ -pubout -outform DER | openssl md5 -c
 }
+
+# enable byobu
+#_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
