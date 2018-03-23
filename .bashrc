@@ -5,28 +5,24 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='gls --color=auto'
 
-if [ -f /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ]; then
+if [ -f /usr/local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ]; then
   powerline-daemon -q
   POWERLINE_BASH_CONTINUATION=1
   POWERLINE_BASH_SELECT=1
-  source /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+  source /usr/local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 fi
 
 # Fix terminal colors for servers
-alias ssh='TERM=xterm ssh'
-alias vagrant='TERM=xterm vagrant'
-alias chefdk='docker run --rm -it -v ~/data/chef-repo:/repo -v ~/.ssh:/root/.ssh chefdk /bin/bash'
+#alias ssh='TERM=xterm ssh'
+#alias vagrant='TERM=xterm vagrant'
+#alias chefdk='docker run --rm -it -v ~/data/chef-repo:/repo -v ~/.ssh:/root/.ssh chefdk /bin/bash'
 
 # export GOPATH
 export GOPATH=$HOME/data/gocode
-
-# add Go binaries to PATH
+# export Go binary directory
 export PATH=$PATH:$HOME/data/gocode/bin
-
-# add personal ~/bin directory to PATH
-export PATH=$PATH:$HOME/bin
 
 # <3 vi
 export EDITOR=vi
@@ -35,8 +31,8 @@ export EDITOR=vi
 export HISTCONTROL='ignoredups:erasedups'
 
 # chruby
-source /usr/share/chruby/chruby.sh
-chruby 2.4
+#source /usr/share/chruby/chruby.sh
+#chruby 2.4
 
 # ansible-playbook alias
 alias ansible-playbook='ansible-playbook --diff'
@@ -64,7 +60,7 @@ alias vrdp="vagrant rdp -- -r clipboard:PRIMARYCLIPBOARD -g 1600x900"
 ## FUNCTIONS
 # generate random string func
 gen_rand_str () {
-    cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
+    cat /dev/urandom | gtr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
 }
 
 # fingerprint ssh key, compatible with EC2
@@ -72,5 +68,9 @@ function sshkey_fp() {
     openssl pkey -in $@ -pubout -outform DER | openssl md5 -c
 }
 
-# enable byobu
-#_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
+# decrypt ansible-vault encrypted string
+function ansible-vault-decrypt-string() {
+    echo -n "$1" | ansible-vault decrypt /dev/stdin --output=/dev/stderr > /dev/null
+}
+
+export BYOBU_PREFIX=/usr/local
