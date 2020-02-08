@@ -1,3 +1,0 @@
-#!/bin/sh
-
-echo "VMs:$(vboxmanage list runningvms | wc -l)"
