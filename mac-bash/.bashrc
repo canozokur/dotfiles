@@ -92,10 +92,10 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 # powerline-go config
 function _update_ps1() {
-    PS1=$("$GOPATH"/bin/powerline-go -modules 'git,newline,aws,terraform-workspace,venv,user,ssh,cwd,perms,jobs,exit,root,termtitle' -cwd-max-depth 3 -cwd-mode fancy -error $? -numeric-exit-codes)
+    PS1=$(/usr/local/bin/powerline-go -modules 'git,newline,aws,terraform-workspace,venv,user,ssh,cwd,perms,jobs,exit,root,termtitle' -cwd-max-depth 3 -cwd-mode fancy -error $? -numeric-exit-codes)
 }
 
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+if [ "$TERM" != "linux" ] && [ -f "/usr/local/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
