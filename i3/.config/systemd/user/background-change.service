@@ -1,0 +1,9 @@
+[Unit]
+Description=Rotate background
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash /home/canozokur/bin/rotate_bg.sh
+
+[Install]
+WantedBy=basic.target

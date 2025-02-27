@@ -1,5 +1,4 @@
 #!/bin/bash
 
-walls_dir=$HOME/Dropbox/Apps/Desktoppr
-selection=$(find $walls_dir -type f -name "*.jpg" -o -name "*.png" | shuf -n1)
-gsettings set org.gnome.desktop.background picture-uri "file://$selection"
+nitrogen --random /home/canozokur/Pictures/Desktoppr --set-zoom-fill --head=0 --save
+nitrogen --random /home/canozokur/Pictures/Desktoppr --set-zoom-fill --head=1 --save
