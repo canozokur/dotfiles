@@ -32,6 +32,7 @@ return {
         preferred_servers = {
             nix = { "nixd" },
             helm = { "helm_ls" },
+            python = { "jedi_language_server", "ruff", "pyright" },
         },
         configs = {
             lua_ls = {
