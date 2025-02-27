@@ -1,10 +1,10 @@
 # Usage
-Install GNU Stow first to easily manage the symlinks. Directory structure is made for Stow
+Install GNU Stow first to easily manage the symlinks. Directory structure is made for Stow.
 Then use the makefile provided:
 ```shell
 $ make run t=$target
 ```
-t being one of the directories you want to build the dir structure for:
+`t` being one of the directories you want to build the dir structure for:
 ```shell
 $ make run t=zellij
 ```
