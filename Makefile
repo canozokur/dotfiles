@@ -1,20 +1,13 @@
-dirs = $(i3)
+dirs = $(i3 nvim bash)
+t = $(error Please set t=<target> to the target you're building)
 .PHONY : all
 stow :
 	stow --target $(HOME) --verbose $(stow_dirs)
 
-.PHONY : i3
-i3 :
-	stow --verbose $(VERBOSITY) --target $(HOME) --verbose i3
+.PHONY : run
+run :
+	stow --verbose $(VERBOSITY) --target $(HOME) --verbose $(t)
 
-.PHONY : dry-i3
-dry-i3 :
-	stow --no --target $(HOME) --verbose i3
-
-.PHONY : nvim
-nvim :
-	stow --verbose $(VERBOSITY) --target $(HOME) --verbose nvim
-
-.PHONY : dry-nvim
-dry-nvim :
-	stow --no --target $(HOME) --verbose nvim
+.PHONY : dry-run
+dry-run :
+	stow --no --target $(HOME) --verbose $(t)
