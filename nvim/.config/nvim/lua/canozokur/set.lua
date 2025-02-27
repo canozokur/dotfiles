@@ -33,3 +33,5 @@ vim.g.mapleader = " "
 
 -- Disable mouse
 vim.opt.mouse = ""
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
