@@ -1,4 +1,4 @@
-dirs = $(i3 nvim bash)
+dirs = $(i3 nvim bash zellij)
 t = $(error Please set t=<target> to the target you're building)
 .PHONY : all
 stow :
