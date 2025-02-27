@@ -1,12 +1,12 @@
-dirs = $(i3 nvim bash zellij wezterm)
+dirs = i3 nvim bash zellij wezterm
 t = $(error Please set t=<target> to the target you're building)
 .PHONY : all
 all :
-	stow --target $(HOME) --verbose $(stow_dirs)
+	stow --target $(HOME) --verbose $(dirs)
 
 .PHONY : dry-all
 dry-all :
-	stow --no --target $(HOME) --verbose $(stow_dirs)
+	stow --no --target $(HOME) --verbose $(dirs)
 
 .PHONY : run
 run :
