@@ -94,19 +94,6 @@ set $ws9 "9"
 # include display settings from file
 include ~/.config/i3/display/settings.conf
 
-# bind odd numbered workspaces to primary monitor
-workspace $ws1 output $primary_output
-workspace $ws2 output $primary_output
-workspace $ws3 output $primary_output
-workspace $ws4 output $primary_output
-workspace $ws5 output $primary_output
-
-# bind odd numbered workspaces to secondary monitor
-workspace $ws6 output $secondary_output
-workspace $ws7 output $secondary_output
-workspace $ws8 output $secondary_output
-workspace $ws9 output $secondary_output
-
 # go back/forth between workspaces
 workspace_auto_back_and_forth yes
 
