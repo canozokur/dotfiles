@@ -91,9 +91,8 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 
-# monitor options
-set $primary_output primary
-set $secondary_output DP-2 # !! edit this using the "xrandr --listmonitors" command output !!
+# include display settings from file
+include ~/.config/i3/display/settings.conf
 
 # bind odd numbered workspaces to primary monitor
 workspace $ws1 output $primary_output
