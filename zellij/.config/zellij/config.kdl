@@ -70,8 +70,9 @@ keybinds clear-defaults=true{
     }
     scroll {
         bind "Alt s" { SwitchToMode "Normal"; }
+        bind "c" { Clear; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
-        bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Alt c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
@@ -79,6 +80,8 @@ keybinds clear-defaults=true{
         bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
+        bind "U" { ScrollToTop; }
+        bind "D" { ScrollToBottom; }
     }
     search {
         bind "Alt s" { SwitchToMode "Normal"; }
