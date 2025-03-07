@@ -126,7 +126,7 @@ keybinds clear-defaults=true{
     }
     shared_except "locked" {
         bind "Alt g" { SwitchToMode "Locked"; }
-        bind "Alt q" { Quit; }
+        bind "Alt Q" { Quit; }
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
     }
