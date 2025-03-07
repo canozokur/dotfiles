@@ -131,7 +131,7 @@ b64d() {
 }
 # END ANSIBLE MANAGED BLOCK FOR base64decode alias
 # BEGIN ANSIBLE MANAGED BLOCK FOR git clone  func
-gitclone(){ pushd ~/data/git; gitstrip="${1#*//}"; gitpath="${gitstrip##*:}"; git clone "$@" ${gitpath%.git}; popd;}
+gitclone(){ pushd ~/data/git; git clone "$@" $(echo "$@" | sed -nE 's_.*[/|:](.*)/(.*)[\.git|\.git\/]_\1/\2_'); popd;}
 # END ANSIBLE MANAGED BLOCK FOR git clone  func
 # BEGIN ANSIBLE MANAGED BLOCK FOR curl timing func
 alias cuti="curl -w '
