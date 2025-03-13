@@ -21,11 +21,6 @@ format = " $icon $running/$total"
 [[block]]
 block = "cpu"
 interval = 1
-format = " $icon $utilization"
-
-[[block]]
-block = "cpu"
-interval = 1
 format = " $icon $barchart $utilization "
 format_alt = " $icon $frequency{ $boost|} "
 info_cpu = 20
