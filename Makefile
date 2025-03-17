@@ -1,12 +1,13 @@
-dirs = i3 nvim bash zellij wezterm
+linuxDirs = i3 nvim bash zellij wezterm
 t = $(error Please set t=<target> to the target you're building)
-.PHONY : all
-all :
-	stow --target $(HOME) --verbose $(dirs)
+.DEFAULT_GOAL := dry-linux
+.PHONY : linux
+linux :
+	stow --target $(HOME) --verbose $(linuxDirs)
 
-.PHONY : dry-all
-dry-all :
-	stow --no --target $(HOME) --verbose $(dirs)
+.PHONY : dry-linux
+dry-linux :
+	stow --no --target $(HOME) --verbose $(linuxDirs)
 
 .PHONY : run
 run :
