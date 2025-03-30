@@ -1,4 +1,4 @@
-linuxDirs = i3 nvim bash zellij wezterm
+linuxDirs = i3 nvim bash zellij wezterm git
 t = $(error Please set t=<target> to the target you're building)
 .DEFAULT_GOAL := dry-linux
 .PHONY : linux
