@@ -16,7 +16,7 @@ return {
     }
   },
   font_size = 12,
-  window_background_opacity = 0.90,
+  window_background_opacity = 0.95,
   window_decorations = "RESIZE",
   use_fancy_tab_bar = false,
   enable_tab_bar = false,
