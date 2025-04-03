@@ -102,8 +102,8 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 ## keyboard repeat
-input 13807:18:Defy-BLE_-_1_Keyboard repeat_rate 500
-input 13807:18:Defy-BLE_-_1_Keyboard repeat_delay 35
+input 13807:18:Defy-BLE_-_1_Keyboard repeat_rate 50
+#input 13807:18:Defy-BLE_-_1_Keyboard repeat_delay 50
 # Unclutter mouse cursor
 exec --no-startup-id unclutter
 
