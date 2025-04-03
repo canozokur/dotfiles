@@ -1,4 +1,4 @@
-linuxDirs = i3 nvim bash zellij wezterm git
+linuxDirs = i3 nvim bash zellij wezterm git sway kanshi
 t = $(error Please set t=<target> to the target you're building)
 .DEFAULT_GOAL := dry-linux
 .PHONY : linux
