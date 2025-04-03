@@ -25,25 +25,25 @@ bindsym --release $mod+Return exec /usr/bin/wezterm --config-file ~/.config/wezt
 bindsym --release $mod+q kill
 
 # change focus
-bindsym --release $mod+j focus down
-bindsym --release $mod+k focus up
-bindsym --release $mod+h focus left
-bindsym --release $mod+l focus right
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+h focus left
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym --release $mod+Left focus left
-bindsym --release $mod+Down focus down
-bindsym --release $mod+Up focus up
-bindsym --release $mod+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # lock screen bindings
 bindsym --release $mod+Shift+l exec swaylock -f -c 000000
 
 # alternatively, you can use the cursor keys:
-bindsym --release $mod+Shift+Left move left
-bindsym --release $mod+Shift+Down move down
-bindsym --release $mod+Shift+Up move up
-bindsym --release $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+b split h
@@ -247,13 +247,11 @@ for_window [class="Spotify"] mark m
 for_window [class="Google-chrome"] mark b
 for_window [class="zoom" instance="zoom"] mark z
 
-# read 1 character and go to the window with the character
-bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
-# read 1 character and mark the current window with this character
-bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
-
 # restore layout of workspace 6
 exec --no-startup-id "swaymsg 'workspace 6; append_layout /home/canozokur/.config/i3/workspace-2.json'"
+
+# start wlsunset
+exec "wlsunset -l 60.17 -L 24.93"
 
 # autostart apps for ws2
 exec --no-startup-id greenclip daemon>/dev/null
