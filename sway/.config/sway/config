@@ -189,6 +189,10 @@ for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Pamac-manager"] floating enable
+for_window [app_id="galculator"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_role="dialog"] floating enable
+for_window [app_id="Zoom Workplace"] floating enable
 
 # Multimedia Keys
 
