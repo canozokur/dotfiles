@@ -267,3 +267,7 @@ bar {
         urgent_workspace #2f343a #900000 #ffffff
     }
 }
+
+include /etc/sway/config.d/*
+
+exec_always systemctl --user start sway-session.target
