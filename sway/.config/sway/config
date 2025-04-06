@@ -216,7 +216,7 @@ bindsym XF86AudioStop exec playerctl stop
 # App shortcuts
 bindsym $mod+n exec "/usr/bin/thunar"
 bindsym Print exec "flameshot full"
-bindsym $mod+Print exec "flameshot gui"
+bindsym $mod+Shift+p exec "flameshot gui"
 bindsym ctrl+grave exec "dunstctl history-pop"
 bindsym ctrl+space exec "dunstctl close"
 
