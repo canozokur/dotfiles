@@ -19,10 +19,10 @@ bindsym XF86MonBrightnessUp exec xbacklight +10
 bindsym XF86MonBrightnessDown exec xbacklight -10
 
 # start a terminal
-bindsym --release $mod+Return exec /usr/bin/wezterm --config-file ~/.config/wezterm/.wezterm.lua
+bindsym $mod+Return exec /usr/bin/wezterm --config-file ~/.config/wezterm/.wezterm.lua
 
 # kill focused window
-bindsym --release $mod+q kill
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+j focus down
