@@ -244,12 +244,6 @@ bindsym $mod+Shift+v exec rofi-code --rofi "rofi -dmenu -line-padding 4 -columns
                 -padding 50 -hide-scrollbar -drun-icon-theme 'Arc-X-D' \
                 -matching fuzzy -font 'Droid Sans Regular 10'"
 
-# Use marks to quickly navigate windows
-for_window [class="Slack"] mark s
-for_window [class="Spotify"] mark m
-for_window [class="Google-chrome"] mark b
-for_window [class="zoom" instance="zoom"] mark z
-
 # restore layout of workspace 6
 exec --no-startup-id "swaymsg 'workspace 6; append_layout /home/canozokur/.config/i3/workspace-2.json'"
 
