@@ -236,9 +236,9 @@ bindsym $mod+Shift+d exec rofi -show calc -modi calc -no-show-match -no-sort \
                 -line-padding 4 -columns 2 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
 
-bindsym $mod+Shift+e exec rofi -modi "clipboard:greenclip print" -show clipboard \
-                -run-command '{cmd}' -drun-icon-theme "Arc-X-D" \
-                -font "Droid Sans Regular 10"
+bindsym $mod+Shift+e exec "cliphist list | rofi -dmenu -drun-icon-theme 'Arc-X-D' \
+                -font 'Droid Sans Regular 10' -display-columns 2 | cliphist decode \
+                | wl-copy"
 
 bindsym $mod+Shift+v exec rofi-code --rofi "rofi -dmenu -line-padding 4 -columns 2 \
                 -padding 50 -hide-scrollbar -drun-icon-theme 'Arc-X-D' \
@@ -250,8 +250,9 @@ exec --no-startup-id "swaymsg 'workspace 6; append_layout /home/canozokur/.confi
 # start wlsunset
 exec "wlsunset -l 60.17 -L 24.93"
 
-# autostart apps for ws2
-exec --no-startup-id greenclip daemon>/dev/null
+# clipboard management
+exec "wl-paste --watch cliphist store"
+
 bar {
     font pango:Hack, FontAwesome 6 Free
     position bottom
