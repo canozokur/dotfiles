@@ -247,6 +247,13 @@ bindsym $mod+Shift+v exec rofi-code --rofi "rofi -dmenu -line-padding 4 -columns
 # restore layout of workspace 6
 exec --no-startup-id "swaymsg 'workspace 6; append_layout /home/canozokur/.config/i3/workspace-2.json'"
 
+# Zoom needs special treatment
+for_window [app_id="zoom"] floating enable
+for_window [app_id="zoom" title="Choose ONE of the audio conference options"] floating enable
+for_window [app_id="zoom" title="zoom"] floating enable
+for_window [app_id="zoom" title="Zoom Meeting"] floating disable
+for_window [app_id="zoom" title="Zoom - Free Account"] floating disable
+
 # start wlsunset
 exec "wlsunset -l 60.17 -L 24.93"
 
