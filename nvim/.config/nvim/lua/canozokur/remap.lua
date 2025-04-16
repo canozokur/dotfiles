@@ -43,6 +43,7 @@ map("n", "<leader>vpp", "<cmd>e ~/.config/nvim/<CR>");
 
 map("n", "<leader>spv", "<cmd>vsplit<CR><C-W>w")
 map("n", "<leader>sph", "<cmd>split<CR><C-W>w")
+map("n", "<leader>spc", "<C-W>q")
 map("n", "<leader>spn", "<C-W>w")
 map("n", "<leader>spN", "<C-W>W")
 map("t", "<leader><ESC>", "<C-\\><C-n>", { noremap = true })
