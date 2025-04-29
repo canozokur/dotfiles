@@ -109,6 +109,9 @@ exec --no-startup-id unclutter
 # Desktop notifications
 exec --no-startup-id /usr/bin/dunst
 
+# Touchpad daemon
+exec --no-startup-id /usr/bin/gebaard -b
+
 # set floating for apps needing it
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 ## welcome and others
