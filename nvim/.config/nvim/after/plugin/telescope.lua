@@ -29,7 +29,7 @@ telescope.setup({
   defaults = {
     mappings = {
       i = {
-        ["<C-q>"] = actions.add_to_qflist + actions.open_qflist,
+        ["<C-q>"] = actions.smart_add_to_qflist + actions.open_qflist,
       },
     },
   },
