@@ -37,3 +37,5 @@ telescope.setup({
 
 vim.keymap.set('n', '<C-o>', function() builtin.find_files({ hidden = true, file_ignore_patterns = { 'node_modules', '.git/', '.venv' }}) end, {})
 vim.keymap.set('n', '<leader>ps', function() live_grep_from_project_git_root() end, {})
+vim.keymap.set('n', '<leader>ff', function() builtin.lsp_document_symbols({ symbols='function' }) end, {})
+vim.keymap.set('n', '<leader>fa', function() builtin.lsp_document_symbols() end, {})
