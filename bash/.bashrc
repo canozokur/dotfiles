@@ -176,6 +176,7 @@ export PATH="$HOME/.tfenv/bin:$PATH"
 # BEGIN ANSIBLE MANAGED BLOCK FOR kubectl
 alias k='kubectl'
 alias ky='kubectl -o yaml'
+alias kd='kubectl describe'
 _completion_loader kubectl
 complete -o default -F __start_kubectl k
 complete -o default -F __start_kubectl ky
