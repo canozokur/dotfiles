@@ -4,6 +4,7 @@ local util = require("util")
 local disabled = wezterm.action.DisableDefaultAssignment
 
 return {
+  color_scheme = "Catppuccin Mocha",
   font = wezterm.font({family="CaskaydiaCove Nerd Font Mono", weight="Regular"}),
   font_rules = {
     {

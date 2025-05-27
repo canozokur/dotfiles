@@ -19,7 +19,8 @@ bindsym XF86MonBrightnessUp exec xbacklight +10
 bindsym XF86MonBrightnessDown exec xbacklight -10
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/wezterm --config-file ~/.config/wezterm/.wezterm.lua
+# bindsym $mod+Return exec /usr/bin/wezterm --config-file ~/.config/wezterm/.wezterm.lua
+bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+q kill
