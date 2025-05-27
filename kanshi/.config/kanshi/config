@@ -1,19 +1,19 @@
+profile laptop {
+  output "Sharp Corporation 0x14D0 Unknown" enable
+}
+
 profile home_dual {
-  output "e-DP1" disable
+  output "Sharp Corporation 0x14D0 Unknown" disable
   output "ASUSTek COMPUTER INC VG27B LALMQS275717" enable mode 2560x1440@144Hz transform 270 position 0,0
   output "ASUSTek COMPUTER INC PG279QE K7LMQS096556" enable mode 2560x1440@60Hz position 1440,0
 }
 
 profile home_single {
-  output "e-DP1" disable
-  output "ASUSTek COMPUTER INC PG279QE K7LMQS096556" enable mode 2560x1440@60Hz adaptive_sync off
-}
-
-profile home_laptop {
-  output "e-DP1" enable mode 3840x2160@60Hz scale 2
-}
-
-profile office_single {
   output "Sharp Corporation 0x14D0 Unknown" disable
-  output "HP Inc. HP Z27k G3 CN42040BP2" enable mode 3840x2160@60Hz adaptive_sync off
+  output "ASUSTek COMPUTER INC PG279QE K7LMQS096556" enable mode 2560x1440@60Hz
+}
+
+profile home_single_vert {
+  output "Sharp Corporation 0x14D0 Unknown" disable
+  output "ASUSTek COMPUTER INC VG27B LALMQS275717" enable mode 2560x1440@144Hz transform 270 position 0,0
 }
