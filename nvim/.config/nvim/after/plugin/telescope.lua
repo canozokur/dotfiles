@@ -30,6 +30,7 @@ telescope.setup({
     mappings = {
       i = {
         ["<C-q>"] = actions.smart_add_to_qflist + actions.open_qflist,
+        ["<C-e>"] = telescope.extensions.send_to_harpoon.actions.send_selected_to_harpoon,
       },
     },
   },
