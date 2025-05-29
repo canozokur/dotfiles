@@ -11,6 +11,7 @@ background-opacity = 0.97
 bold-is-bright = true
 confirm-close-surface = false
 gtk-adwaita = false
+resize-overlay = never
 
 
 # keybinds
